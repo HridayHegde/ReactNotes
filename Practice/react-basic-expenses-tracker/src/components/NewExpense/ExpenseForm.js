@@ -35,8 +35,8 @@ const ExpenseForm = (props) => {
     event.preventDefault();
     const expenseData = {
       title: userInput.enteredTitle,
-      amount: userInput.enteredAmount,
-      date: new Date(userInput.enteredDate),
+      amount: +userInput.enteredAmount,
+      date: new Date(userInput.enteredDate + 'T00:00'),
     };
     //console.log(expenseData)
     props.onSaveExpenseData(expenseData);
@@ -44,6 +44,22 @@ const ExpenseForm = (props) => {
       return { enteredTitle: "", enteredAmount: "", enteredDate: "" };
     });
   };
+
+  const showFormHandler =() => {
+    props.showExpenseForm(true)
+  }
+  const hideFormHandler = () => {
+    props.showExpenseForm(false)
+  }
+
+  if (props.isEditing === false){
+    return (
+      <div className="new-expense__actions_middle">
+        <button onClick={showFormHandler}>Add New Expense</button>
+      </div>
+    )
+  }
+
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -77,6 +93,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={hideFormHandler}>Close</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>

@@ -24,3 +24,12 @@
   - eg. setUserInput((prevState) => {
     return {...prevState,enteredtitle:event.target.value}
     })
+
+- Keys
+  - keys need to be added to dynamically loaded component lists for react to identify all the components correctly
+  - Not assigning this may lead it to discard state changes on other similar elements as it rerenders the entire list of components
+
+
+- JSX ternary expressions are allowed
+
+- && can be used in a condition statement to output the item after && when the first condition is true
