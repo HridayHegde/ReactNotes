@@ -49,3 +49,12 @@
   - This is used as an alternative to useState when you need to have complex data stored in a state, it can also have a function to solve the state based sequences and what to return
 - useEffect
   - This is used to trigger events based off of other events. Here the Effect is a side effect such that suppose a variable(state) is changed then this effect will run
+
+- Context
+  - This is used to store context based data, as in suppose a global style variable
+  - This can be set by using .Provider in the component and then pass the value= here
+  - This can be consumed by the useContext hook
+
+- useImperativeHandle
+  - This is used to expose functionality of a component reference externally
+  - avoid doing this
