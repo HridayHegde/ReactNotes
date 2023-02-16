@@ -1,0 +1,28 @@
+.price{
+    padding: 20px;
+    border-radius: 25px;
+    background-color:rgba(0, 0, 0, 0.2);
+    color: white;
+    border:none;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+.name{
+    padding: 20px;
+    border-radius: 25px;
+    color: white;
+    border:none;
+    display: flex;
+    font-weight: bold;
+}
+
+.mealbody{
+    transform: translate(100%,100%);
+    background-color: brown;
+    justify-content: center;
+    width: 30%;
+}
